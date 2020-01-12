@@ -1,6 +1,6 @@
 {
   "name": "react-player-circle-controls",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Circular UI controls for playing media",
   "repository": "github:jamsinclair/react-player-circle-controls",
   "main": "dist/index.js",
