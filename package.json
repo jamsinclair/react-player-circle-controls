@@ -11,7 +11,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup -c && cp src/*.css dist",
-    "prepare": "yarn build",
+    "prepare": "rm -r dist && yarn build",
     "test": "yarn xo"
   },
   "engines": {
