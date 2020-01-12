@@ -1,16 +1,16 @@
-# React Player Circle
+# React Player Circle Controls
 
-> Circular UI for representing media playback
+> Circular UI Controls for playing media
 
-[![NPM](https://img.shields.io/npm/v/react-player-circle.svg)](https://www.npmjs.com/package/react-player-circle)
-[![Minified and Gzipped](https://badgen.net/bundlephobia/minzip/react-player-circle)](https://bundlephobia.com/result?p=react-player-circle@0.1.1)
+[![NPM](https://img.shields.io/npm/v/react-player-circle-controls.svg)](https://www.npmjs.com/package/react-player-circle-controls)
+[![Minified and Gzipped](https://badgen.net/bundlephobia/minzip/react-player-circle-controls)](https://bundlephobia.com/result?p=react-player-circle-controls@latest)
 
 ## Install
 
 ```bash
-npm install --save react-player-circle
+npm install --save react-player-circle-controls
 # OR
-yarn add react-player-circle
+yarn add react-player-circle-controls
 ```
 
 ## Usage
@@ -19,13 +19,13 @@ You'll need to use the component in conjunction with another media player librar
 
 It was built with [react-player](https://github.com/CookPete/react-player) in mind but could work with others too.
 
-[See the StoryBook app for live example](https://jamsinclair.github.io/react-player-circle/?path=/story/overview--with-react-player)
+[See the StoryBook app for live example](https://jamsinclair.github.io/react-player-circle-controls/?path=/story/overview--with-react-player)
 
 ```jsx
 import React, {useRef, useState} from 'react';
 import ReactPlayer from 'react-player';
-import ReactPlayerCircle from 'react-player-circle';
-import 'react-player-circle/dist/react-player-circle.css';
+import CircleControls from 'react-player-circle-controls';
+import 'react-player-circle-controls/dist/styles.css';
 
 const Example = () => {
   const player = useRef(null);
@@ -52,7 +52,7 @@ const Example = () => {
         onProgress={setPlayerState}
         onEnded={() => setPlaying(false)}
       />
-      <ReactPlayerCircle
+      <CircleControls
         played={playerState.played}
         loaded={playerState.loaded}
         playing={playing}

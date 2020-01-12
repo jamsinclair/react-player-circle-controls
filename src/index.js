@@ -22,9 +22,9 @@ const getDefaultLabels = playing => ({
 });
 
 // eslint-disable-next-line react/prop-types
-const PlayIcon = ({playing}) => <span className={`rpc-play-icon${playing ? ' pause' : ''}`}/>;
+const PlayIcon = ({playing}) => <span className={`rpcc-play-icon${playing ? ' pause' : ''}`}/>;
 
-const ReactCirclePlayer = ({
+const ReactPlayerCircleControls = ({
   ariaLabels,
   color = 'RoyalBlue',
   playIconColor,
@@ -41,12 +41,12 @@ const ReactCirclePlayer = ({
   const buttonRef = useRef(null);
   const labels = ariaLabels || getDefaultLabels(playing, played);
   const vars = {
-    '--rpc-color': color,
-    '--rpc-play-icon-color': playIconColor,
-    '--rpc-progress-loaded': loaded,
-    '--rpc-progress-played': played,
-    '--rpc-progress-size': `${progressSize}px`,
-    '--rpc-size': `${size}px`
+    '--rpcc-color': color,
+    '--rpcc-play-icon-color': playIconColor,
+    '--rpcc-progress-loaded': loaded,
+    '--rpcc-progress-played': played,
+    '--rpcc-progress-size': `${progressSize}px`,
+    '--rpcc-size': `${size}px`
   };
 
   const onSeekClick = e => {
@@ -60,17 +60,17 @@ const ReactCirclePlayer = ({
   };
 
   return (
-    <div className="rpc-player" style={vars} onClick={onSeek && onSeekClick}>
-      <div ref={playerRef} className="rpc-player-inner">
-        <svg className="rpc-ring-container">
-          <circle shapeRendering="geometricPrecision" className="rpc-ring rpc-ring__duration"/>
-          <circle shapeRendering="geometricPrecision" className="rpc-ring rpc-ring__loaded"/>
-          <circle shapeRendering="geometricPrecision" className="rpc-ring rpc-ring__played"/>
+    <div className="rpcc-player" style={vars} onClick={onSeek && onSeekClick}>
+      <div ref={playerRef} className="rpcc-player-inner">
+        <svg className="rpcc-ring-container">
+          <circle shapeRendering="geometricPrecision" className="rpcc-ring rpcc-ring__duration"/>
+          <circle shapeRendering="geometricPrecision" className="rpcc-ring rpcc-ring__loaded"/>
+          <circle shapeRendering="geometricPrecision" className="rpcc-ring rpcc-ring__played"/>
         </svg>
         <button
           ref={buttonRef}
           type="button"
-          className="rpc-play-button"
+          className="rpcc-play-button"
           aria-label={labels.PLAY_BUTTON}
           onClick={onTogglePlaying}
         >
@@ -81,7 +81,7 @@ const ReactCirclePlayer = ({
   );
 };
 
-ReactCirclePlayer.propTypes = {
+ReactPlayerCircleControls.propTypes = {
   ariaLabels: PropTypes.shape({
     PLAY_BUTTON: PropTypes.string
   }),
@@ -97,7 +97,7 @@ ReactCirclePlayer.propTypes = {
   onTogglePlaying: PropTypes.func
 };
 
-ReactCirclePlayer.defaultProps = {
+ReactPlayerCircleControls.defaultProps = {
   ariaLabels: null,
   color: 'RoyalBlue',
   icon: null,
@@ -110,4 +110,4 @@ ReactCirclePlayer.defaultProps = {
   onTogglePlaying: null
 };
 
-export default ReactCirclePlayer;
+export default ReactPlayerCircleControls;

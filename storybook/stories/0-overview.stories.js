@@ -1,17 +1,17 @@
 import React, {useRef, useState} from 'react';
 import ReactPlayer from 'react-player';
-import ReactPlayerCircle from 'react-player-circle';
+import CircleControls from 'react-player-circle-controls';
 // eslint-disable-next-line import/no-unassigned-import
-import 'react-player-circle/dist/react-player-circle.css';
+import 'react-player-circle-controls/dist/styles.css';
 
 export default {
   title: 'Overview',
-  component: ReactPlayerCircle
+  component: CircleControls
 };
 
 export const Basics = () => {
   return (
-    <ReactPlayerCircle
+    <CircleControls
       loaded={0.9}
       played={0.3}
       size={150}
@@ -25,8 +25,8 @@ export const WithReactPlayer = () => {
 	// Uses the Following Imports
 	import React, {useRef, useState} from 'react';
 	import ReactPlayer from 'react-player';
-	import ReactPlayerCircle from 'react-player-circle';
-	import 'react-player-circle/dist/react-player-circle.css';
+	import CircleControls from 'react-player-circle-controls';
+	import 'react-player-circle-controls/dist/styles.css';
 */
 
   const player = useRef(null);
@@ -53,7 +53,7 @@ export const WithReactPlayer = () => {
         onProgress={setPlayerState}
         onEnded={() => setPlaying(false)}
       />
-      <ReactPlayerCircle
+      <CircleControls
         played={playerState.played}
         loaded={playerState.loaded}
         playing={playing}
