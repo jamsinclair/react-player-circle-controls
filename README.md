@@ -3,6 +3,7 @@
 > Circular UI for representing media playback
 
 [![NPM](https://img.shields.io/npm/v/react-player-circle.svg)](https://www.npmjs.com/package/react-player-circle)
+[![Minified and Gzipped](https://badgen.net/bundlephobia/minzip/react-player-circle)](https://bundlephobia.com/result?p=react-player-circle@0.1.1)
 
 ## Install
 
