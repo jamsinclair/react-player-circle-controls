@@ -1,0 +1,87 @@
+.rpc-player {
+  --PI: 3.14159265358979;
+  --rpc-ring-radius: calc((var(--rpc-size) / 2) - (var(--rpc-progress-size) / 2));
+  --rpc-ring-circum: calc(var(--PI) * var(--rpc-ring-radius) * 2);
+  --rpc-play-button-size: calc(var(--rpc-size) - (var(--rpc-progress-size) * 2));
+}
+
+.rpc-player-inner {
+  display: flex;
+  height: var(--rpc-size);
+  width: var(--rpc-size);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.rpc-ring-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: var(--rpc-size);
+  width: var(--rpc-size);
+  transform: rotate(-90deg);
+}
+
+.rpc-ring {
+  cx: calc(var(--rpc-size) / 2);
+  cy: calc(var(--rpc-size) / 2);
+  fill: none;
+  stroke-width: var(--rpc-progress-size);
+  r: var(--rpc-ring-radius);
+  stroke-dasharray: var(--rpc-ring-circum);
+  shape-rendering: optimizeQuality;
+  stroke-dashoffset: 0;
+}
+
+.rpc-ring__duration {
+  stroke: var(--rpc-ring-duration-color, var(--rpc-color));
+  opacity: 0.1;
+}
+
+.rpc-ring__loaded {
+  stroke: var(--rpc-ring--color, var(--rpc-color));
+  opacity: 0.2;
+  stroke-dashoffset: calc(var(--rpc-ring-circum) * (1 - var(--rpc-progress-loaded)));
+}
+
+.rpc-ring__played {
+  stroke: var(--rpc-ring-played-color, var(--rpc-color));
+  opacity: 0.5;
+  stroke-dashoffset: calc(var(--rpc-ring-circum) * (1 - var(--rpc-progress-played)));
+}
+
+.rpc-play-button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: var(--rpc-play-button-size);
+  width: var(--rpc-play-button-size);
+  position: relative;
+  border: none;
+  border-radius: 50%;
+  background: var(--rpc-button-color, var(--rpc-color));
+  cursor: pointer;
+}
+
+.rpc-play-button:active {
+  opacity: 0.9;
+}
+
+.rpc-play-icon {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 0;
+    height: calc(var(--rpc-play-button-size) * 0.25);
+    margin-left: calc(var(--rpc-play-button-size) * 0.04166666667);
+    border-color: transparent transparent transparent var(--rpc-play-button-icon, #202020);
+    transition: 100ms all ease;
+    border-style: solid;
+    border-width: calc(var(--rpc-play-button-size) * 0.125) 0 calc(var(--rpc-play-button-size) * 0.125) calc(var(--rpc-play-button-size) * 0.25);
+}
+
+.rpc-play-icon.pause {
+    margin-left: 0;
+    border-style: double;
+    border-width: 0px 0 0px calc(var(--rpc-play-button-size) * 0.25);
+}

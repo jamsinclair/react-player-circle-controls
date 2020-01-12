@@ -1,0 +1,46 @@
+{
+  "name": "react-player-circle",
+  "version": "1.0.0",
+  "description": "A circular UI for playing media",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "author": "Jamie Sinclair <jamsinclairnz@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c && cp src/*.css dist",
+    "prepare": "yarn build",
+    "test": "yarn xo"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "eslint-config-xo-react": "^0.22.0",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "rollup": "^1.29.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "xo": "^0.25.3"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "xo": {
+    "react": "16.8.0",
+    "space": true,
+    "extends": "xo-react"
+  }
+}
