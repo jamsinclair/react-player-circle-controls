@@ -27,7 +27,7 @@ const PlayIcon = ({playing}) => <span className={`rpcc-play-icon${playing ? ' pa
 const ReactPlayerCircleControls = ({
   ariaLabels,
   color = 'RoyalBlue',
-  playIconColor,
+  iconColor,
   icon,
   loaded = 0,
   progressSize = 12,
@@ -42,7 +42,7 @@ const ReactPlayerCircleControls = ({
   const labels = ariaLabels || getDefaultLabels(playing, played);
   const vars = {
     '--rpcc-color': color,
-    '--rpcc-play-icon-color': playIconColor,
+    '--rpcc-play-icon-color': iconColor,
     '--rpcc-progress-loaded': loaded,
     '--rpcc-progress-played': played,
     '--rpcc-progress-size': `${progressSize}px`,
@@ -87,6 +87,7 @@ ReactPlayerCircleControls.propTypes = {
   }),
   color: PropTypes.string,
   icon: PropTypes.node,
+  iconColor: PropTypes.string,
   loaded: PropTypes.number,
   progressSize: PropTypes.number,
   played: PropTypes.number,
@@ -101,6 +102,7 @@ ReactPlayerCircleControls.defaultProps = {
   ariaLabels: null,
   color: 'RoyalBlue',
   icon: null,
+  iconColor: null,
   loaded: 0,
   progressSize: 12,
   played: 0,
