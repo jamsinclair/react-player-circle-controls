@@ -1,6 +1,6 @@
 {
   "name": "react-player-circle",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A circular UI for playing media",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
