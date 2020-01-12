@@ -18,6 +18,8 @@ You'll need to use the component in conjunction with another media player librar
 
 It was built with [react-player](https://github.com/CookPete/react-player) in mind but could work with others too.
 
+[See the StoryBook app for live example](https://jamsinclair.github.io/react-player-circle/?path=/story/overview--with-react-player)
+
 ```jsx
 import React, {useRef, useState} from 'react';
 import ReactPlayer from 'react-player';
