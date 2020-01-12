@@ -5,6 +5,8 @@
 [![NPM](https://img.shields.io/npm/v/react-player-circle-controls.svg)](https://www.npmjs.com/package/react-player-circle-controls)
 [![Minified and Gzipped](https://badgen.net/bundlephobia/minzip/react-player-circle-controls)](https://bundlephobia.com/result?p=react-player-circle-controls@latest)
 
+![Animation of Circle Controls](https://user-images.githubusercontent.com/5964236/72217574-41393200-3573-11ea-8d69-59647d660056.gif)
+
 ## Install
 
 ```bash
