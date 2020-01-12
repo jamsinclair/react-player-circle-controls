@@ -27,6 +27,7 @@ const PlayIcon = ({playing}) => <span className={`rpc-play-icon${playing ? ' pau
 const ReactCirclePlayer = ({
   ariaLabels,
   color = 'RoyalBlue',
+  playIconColor,
   icon,
   loaded = 0,
   progressSize = 12,
@@ -41,6 +42,7 @@ const ReactCirclePlayer = ({
   const labels = ariaLabels || getDefaultLabels(playing, played);
   const vars = {
     '--rpc-color': color,
+    '--rpc-play-icon-color': playIconColor,
     '--rpc-progress-loaded': loaded,
     '--rpc-progress-played': played,
     '--rpc-progress-size': `${progressSize}px`,
