@@ -13,7 +13,8 @@
   "scripts": {
     "build": "rollup -c && cp src/*.css dist",
     "prepare": "rm -r dist && yarn build",
-    "test": "yarn xo"
+    "prepublishOnly": "yarn test",
+    "test": "xo ./src ./storybook"
   },
   "engines": {
     "node": ">=8",
@@ -40,7 +41,6 @@
     "react-dom": "^16.8.0"
   },
   "xo": {
-    "react": "16.8.0",
     "space": true,
     "extends": "xo-react"
   }
